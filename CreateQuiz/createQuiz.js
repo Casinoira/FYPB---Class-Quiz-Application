@@ -1,6 +1,6 @@
 // This is specifically for createQuiz.html
 
-// $("#exportQuestions").hide();
+$("#exportQuestions").hide();
 
 $(document).ready(function(){
     var quesNumber;
@@ -21,7 +21,7 @@ $(document).ready(function(){
             var content ="";
         }
         //after populating the template, show the Export button        
-        // $("#exportQuestions").show();
+        $("#exportQuestions").show();
     });
 
     $("#exportQuestions").click(function(){        
