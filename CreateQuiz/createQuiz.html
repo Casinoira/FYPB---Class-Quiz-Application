@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Create Quiz</title>
@@ -23,7 +23,7 @@
             background: green;
             border: 2px solid green;
         }
-    </style>
+    </style>    
 </head>
 
 <body class="container">
@@ -34,7 +34,7 @@
         <div class="container detailsgroup">
             <div class="form-group">
                 <label for="quizTitle">Quiz Title</label>
-                <input type="text" class="form-control" id="quizTitle" placeholder="Enter email">
+                <input type="text" class="form-control" id="quizTitle" placeholder="Enter quiz title">
                 <small id="emailHelp" class="form-text text-muted">The title can only contain letters and
                     numbers</small>
             </div>
@@ -59,25 +59,68 @@
             </select>
         </div>
         <br>
-        
-        <div id="content_hide1">
+
+        <!-- OLD FEATURE -->
+        <!-- <div id="content_hide1">
             <label for="quesNum">How many questions for this quiz?</label>
             <div class="input-group mb-3">
                 <input type="number" id="quesNum" class="form-control" min="1" max="100" placeholder="Between 1 to 100">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-primary" type="button" id="generate_template">Generate
-                        Template</button>
+                    <button class="btn btn-outline-primary" type="button" id="generate_template">Generate Template</button>
                 </div>
             </div>
+        </div> -->
+        <h4>Question List</h4>
+        <div id="questionlist">
+            <div class="container detailsgroup" id="Q1"> <label for="question1">Question 1</label> <textarea
+                    class="form-control" id="question1" rows="2" placeholder="Type question inside here"></textarea>
+                <br>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <input type="radio" name="c1" value="1" class="ans1" checked>
+                        </div>
+                    </div> <input type="text" class="form-control ans1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <input type="radio" name="c1" value="2" class="ans2"> </div>
+                    </div> <input type="text" class="form-control ans2">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <input type="radio" name="c1" value="3" class="ans3"> </div>
+                    </div> <input type="text" class="form-control ans3">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"> <input type="radio" name="c1" value="4" class="ans4"> </div>
+                    </div> <input type="text" class="form-control ans4">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend"> <label class="input-group-text"
+                            for="inputGroupSelect1">Score</label> </div> <select class="custom-select"
+                        id="inputGroupSelect1">
+                        <option value="1">1 point</option>
+                        <option value="2">2 point</option>
+                        <option value="3">3 point</option>
+                    </select>
+                </div>
+            </div>
+            <br>
         </div>
-        <div id="questionlist"></div>
-        <button id="exportQuestions" class="btn btn-primary">Export Quiz</button>
+        <br>
+        <button class="btn btn-outline-primary" id="newquestion">Add New Question</button>
+        <button class="btn btn-outline-danger" id="deleteprev">Delete Previous question</button>
+        <br><br>
+        <button id="exportQuestions" class="btn btn-primary form-control">Export Quiz</button>
+
     </form>
 
 </body>
 <script src="bootstrap/jQuery.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script src="FileSaver.js"></script>
 <script src="createQuiz.js"></script>
 
 </html>
