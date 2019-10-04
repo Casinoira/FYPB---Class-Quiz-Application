@@ -69,13 +69,13 @@ $(document).ready(function () {
         for (i = 0; i < quesNumber; i++) {
             var row = "#Q" + (i + 1) + "";
             var radioIn = "input[name='c" + (i + 1) + "']:checked"
-            var question = $(row).find("textarea").val(); //console.log(question);
-            var ans1 = $(row).find("input[type=text].ans1").val(); //console.log(ans1);
-            var ans2 = $(row).find("input[type=text].ans2").val(); //console.log(ans2);
-            var ans3 = $(row).find("input[type=text].ans3").val(); //console.log(ans3);;
-            var ans4 = $(row).find("input[type=text].ans4").val(); //console.log(ans4);;
-            var rightans = $(radioIn).val(); //console.log(rightans);
-            var score = $(row).find("select option:selected").val(); //console.log(score);            
+            var question = $(row).find("textarea").val(); console.log(question);
+            var ans1 = $(row).find("input[type=text].ans1").val(); console.log(ans1);
+            var ans2 = $(row).find("input[type=text].ans2").val(); console.log(ans2);
+            var ans3 = $(row).find("input[type=text].ans3").val(); console.log(ans3);;
+            var ans4 = $(row).find("input[type=text].ans4").val(); console.log(ans4);;
+            var rightans = $(radioIn).parent().parent().parent().find("input[type=text]").val(); console.log(rightans);
+            var score = $(row).find("select option:selected").val(); console.log(score);            
             string_csv += '\n' + 
                 '"' + question + '"' + ',' +
                 '"' + ans1 + '"' + ',' +
